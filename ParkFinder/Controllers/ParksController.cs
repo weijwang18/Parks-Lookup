@@ -21,7 +21,7 @@ namespace ParkFinder.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Park>>> Get(string Name, string State)
+    public async Task<ActionResult<IEnumerable<Park>>> Get(string name, string state)
     {
       var query = _db.Parks.AsQueryable();
 
