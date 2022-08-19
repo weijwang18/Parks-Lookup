@@ -21,9 +21,20 @@ namespace ParkFinder.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Park>>> Get()
+    public async Task<ActionResult<IEnumerable<Park>>> Get(string Name, string State)
     {
-      return await _db.Parks.ToListAsync();
+      var query = _db.Parks.AsQueryable();
+
+      if (name != null)
+      {
+        query = query.Where(entry => entry.Name == name);
+      }
+
+      if (state != null)
+      {
+        query = query.Where(entry => entry.State == state);
+      }
+      return await query.ToListAsync();
     }
 
     [HttpGet("{id}")]
