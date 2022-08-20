@@ -11,4 +11,4 @@ namespace ParkFinder.Models
         [Required]
         public string State { get; set; }
     }
-}ç
+}
