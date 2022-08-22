@@ -119,8 +119,8 @@ http://localhost:5000/api/parks/1
 
 | Parameter | Type | Required/Optional | Description |
 | :--- | :--- | :---  | :--- |
-| Name | string | Required | Return any park with that name. |
-| State | string | Required | Return any park from that state.|
+| Name | String | Required | Return any park with that name. |
+| State | String | Required | Return any park from that state.|
 
 ## License
 
